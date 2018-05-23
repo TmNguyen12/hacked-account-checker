@@ -1,7 +1,9 @@
-import axios from "axios";
+import axios from 'axios';
 
-export const fetchBreachedAccount = account => {
+const fetchBreachedAccounts = account =>
   axios
     .get(`https://haveibeenpwned.com/api/v2/breachedaccount/${account}`)
-    .then(response => console.log(response));
-};
+    .then(response => response)
+    .catch(error => console.log(error));
+
+export default fetchBreachedAccounts;
