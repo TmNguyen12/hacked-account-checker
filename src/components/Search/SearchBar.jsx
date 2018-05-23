@@ -25,7 +25,6 @@ export class SearchBar extends Component {
       e.preventDefault();
       document.getElementsByClassName('search-bar-button')[0].focus();
     } else if (e.keyCode === 13 && this.state.text) {
-      console.log('state', this.state.text);
       this.handleSubmit();
     }
   }
@@ -51,14 +50,13 @@ export class SearchBar extends Component {
         <input
           type="text"
           placeholder="email address"
-          className="search-bar-input"
+          className="search-text"
           onChange={this.update('text')}
           onKeyDown={e => this.handleKey(e, 'text')}
         />
         <input
-          type="submit"
-          className="search-bar-button"
-          value="hacked?"
+          type="button"
+          className="search-button"
           onClick={this.handleSubmit}
         />
       </div>

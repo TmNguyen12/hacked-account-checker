@@ -1,0 +1,32 @@
+.results-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px; }
+
+.result-item {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin-top: 10px;
+  width: 100%; }
+  .result-item .logo-container {
+    border: 1px solid red; }
+  .result-item img {
+    width: 75px; }
+
+.result-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  font-size: 13px;
+  margin-left: 15px; }
+  .result-text * {
+    padding: 3px; }
+
+.hidden {
+  display: none; }
+
+/*# sourceMappingURL=Results.css.map */

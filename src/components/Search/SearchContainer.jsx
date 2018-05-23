@@ -15,11 +15,9 @@ class SearchContainer extends Component {
     if (breachArray) {
       this.setState({ breaches: breachArray });
     }
-    console.log(this.state);
   }
 
   render() {
-    console.log('this.state', this.state);
     return (
       <div className="search-container">
         <SearchBar sendBreaches={this.getBreaches} />

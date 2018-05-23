@@ -1,0 +1,11 @@
+$header-color: #25274D;
+
+
+header {
+  background-color: $header-color; 
+  color: white;
+  height: 30px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;  
+}

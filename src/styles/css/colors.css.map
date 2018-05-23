@@ -1,8 +1,8 @@
 {
 	"version": 3,
-	"file": "colors.css",
+	"file": "Colors.css",
 	"sources": [
-		"../scss/colors.scss"
+		"../scss/Colors.scss"
 	],
 	"names": [],
 	"mappings": ""

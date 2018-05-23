@@ -1,24 +1,55 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-const Item = ({breach}) => {
-  console.log('item breach',breach); 
-  console.log('data-classes',breach.DataClasses);
-  return (
-    <div className='result-item'>
-      <img src={`//logo.clearbit.com/${breach.Domain}`} className='logo' alt='logo' />
-      <div className='result-text'>
-        <p className="Title">{breach.Title}</p>
-        <p className="breach-date">Breach Date: {breach.BreachDate}</p>
-        <div className='description'>{breach.Description}</div>
-        <p className='data-classes'>Compromised Data: </p>
+class Item extends Component {
+  constructor(props){
+    super(props); 
+
+    // this.toggleDescription = this.toggleDescription.bind(this); 
+  }
+
+  
+  // toggleDescription() {
+  //   const itemText = document.getElementsByClassName('result-text')[0];
+  //   const hiddenNode = document.getElementsByClassName('hidden'); 
+
+  //   console.log('itemText', itemText);
+  //   console.log('hiddenNode', hiddenNode); 
+  //   if (hiddenNode) {
+  //     hiddenNode.classList.remove('hidden');
+  //   } else {
+  //     hiddenNode.classList.add('hidden');
+  //   }
+  // }
+
+
+  render() {
+    const { breach } = this.props; 
+    return (
+      <div className="result-item">
+        <div className="logo-container">
+          <img
+            src={`//logo.clearbit.com/${breach.Domain}`}
+            className="logo"
+            alt="logo"
+          />
+        </div>
+        <div className={`result-text ${breach.Title}`} onClick={this.toggleDescription}>
+          <p className="Title">{breach.Title}</p>
+          <p className="breach-date">Breach Date: {breach.BreachDate}</p>
+          <div className="description hidden">{breach.Description}</div>
+          <p className="data-classes">
+            Compromised Data: <br /> {breach.DataClasses.join(', ')}
+          </p>
+        </div>
       </div>
-    </div>
-  )
-}
+    );
+  }
+
+};
 
 Item.propTypes = {
-  breach: PropTypes.object 
-}
+  breach: PropTypes.object
+};
 
-export default Item; 
+export default Item;

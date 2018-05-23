@@ -2,6 +2,14 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+  font-family: scandia-regular;
+  src: url("../../assets/font/Scandia-Regular.otf"); }
+
+@font-face {
+  font-family: scandia-bold;
+  src: url("../../assets/font/Scandia-Bold.otf"); }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,7 +27,8 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font: scandia-regular;
+  font-family: scandia-regular;
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
@@ -61,6 +70,6 @@ table {
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif; }
+  font-family: scandia-regular; }
 
 /*# sourceMappingURL=Reset.css.map */
