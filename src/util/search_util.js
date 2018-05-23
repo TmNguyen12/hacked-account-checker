@@ -1,14 +1,7 @@
-const fetchBreachedAccount = async account => {
-  let results = await fetch(
-    `https://haveibeenpwned.com/api/v2/breachedaccount/${account}`
-  );
-  let data = await results.json();
+import axios from "axios";
 
-  if (data.hasOwnProperty("error")) {
-    return ["error"];
-  } else {
-    return data.stores;
-  }
+export const fetchBreachedAccount = account => {
+  axios
+    .get(`https://haveibeenpwned.com/api/v2/breachedaccount/${account}`)
+    .then(response => console.log(response));
 };
-
-fetchBreachedAccount("shadesofgray12@gmail.com");
