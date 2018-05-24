@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Footer from './components/Footer'; 
 
 import SearchContainer from './components/Search/SearchContainer';
 
@@ -23,6 +24,7 @@ class App extends Component {
         <div className="content">
           <Hero />
           <SearchContainer />
+          <Footer />
         </div>
       </div>
     );

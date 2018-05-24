@@ -36,7 +36,8 @@
 
 @media only screen and (max-width: 660px) {
   .result-item img {
-    width: 75px; } }
+    width: 75px;
+    min-width: 75px; } }
 .result-text {
   display: flex;
   flex-direction: column;
@@ -87,10 +88,6 @@
 
   .Title {
     font-size: 20px; } }
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown; }
-
 .hidden {
   height: 0px;
   padding: 0; }

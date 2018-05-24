@@ -41,9 +41,12 @@ class Item extends Component {
   toggleDescription(e) {
     const shownItem = document.getElementsByClassName('show');
     const itemText = document.getElementById(e.target.dataset.internalid);
+    
+    // Cases where you click on the same index item to open and then close 
     if (shownItem.length > 0 && shownItem[0].id === itemText.id) {
       this.collapseSection(shownItem[0]);
     } else {
+      // closes any currently expanded description sections 
       if (shownItem.length > 0) {
         this.collapseSection(shownItem[0]);
       }
