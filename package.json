@@ -5,7 +5,6 @@
   "dependencies": {
     "axios": "^0.18.0",
     "dompurify": "^1.0.4",
-    "flow-bin": "^0.72.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -26,7 +25,6 @@
     "sass:build": "node-sass-chokidar src/styles/scss -o src/styles/css --source-map true"
   },
   "devDependencies": {
-    "animate.sass": "^1.0.1",
     "babel-eslint": "^8.2.3",
     "babel-preset-flow": "^6.23.0",
     "eslint-config-airbnb": "^16.1.0",

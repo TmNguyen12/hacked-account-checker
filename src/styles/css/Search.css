@@ -31,10 +31,8 @@
   border-top: 1px solid gray; }
 
 .result-item:hover {
-  transform: scale(1.05);
   box-shadow: 0 0 12px #2e3060;
-  cursor: pointer;
-  transform: scale(1.05); }
+  cursor: pointer; }
 
 @media only screen and (max-width: 660px) {
   .result-item img {
@@ -60,6 +58,7 @@
   padding-top: 10px;
   padding-bottom: 20px;
   letter-spacing: 1.25px;
+  margin-right: 20px;
   word-spacing: 2px;
   overflow: hidden;
   transition: height 0.3s ease-out;
@@ -92,15 +91,6 @@
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown; }
 
-@keyframes (fadeInDown) {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0); }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none; } }
 .hidden {
   height: 0px;
   padding: 0; }
@@ -153,7 +143,7 @@
 .search-button {
   width: 60px;
   border: 0 none;
-  background: #D97900 url(../../assets/images/search.png) center no-repeat;
+  background: #d97900 url(../../assets/images/search.png) center no-repeat;
   float: left;
   padding: 0;
   text-align: center;

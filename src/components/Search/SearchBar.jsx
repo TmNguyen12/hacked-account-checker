@@ -35,11 +35,9 @@ export class SearchBar extends Component {
     );
   }
 
-  // TODO: create a validEmail that searchs for regex of an @ and a .com
-
   handleSubmit(event) {
-    if (!this.state.text){
-      return null; 
+    if (!this.state.text) {
+      return null;
     }
     if (event) {
       event.preventDefault();

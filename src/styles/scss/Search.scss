@@ -1,71 +1,70 @@
-@import "Results"; 
+@import 'Results';
 
 .search-container {
   margin: 0 20px;
-	box-sizing: border-box; 
-	display: flex;
-	flex-direction:column; 
-	justify-content: center;
-	align-items: center; 
-	width: 100%; 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .search-bar {
-	z-index: 20; 
-	box-sizing: border-box; 
+  z-index: 20;
+  box-sizing: border-box;
   width: 90%;
-	display: flex; 
-	max-width: 435px;
-	position: absolute; 
-	top: 190px; 
-	left: 50%; 
-	transform: translate(-50%, -50%);
-	input {
-		transition: width 0.2s;
-    -webkit-appearance: none; 
-	}
+  display: flex;
+  max-width: 435px;
+  position: absolute;
+  top: 190px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  input {
+    transition: width 0.2s;
+    -webkit-appearance: none;
+  }
 
-	.fix-search & {
-		position: fixed; 
-		top: 24px;
-	}
+  .fix-search & {
+    position: fixed;
+    top: 24px;
+  }
 }
 
-.search-text{
-  width:100%; 
-	padding: 15px 0 15px 20px;
-	font-size: 15px;
-	border: 0 none;
-	height: 40px;
-	margin-right: 0;
-	color: black;
-	outline: none;
-	border:1px solid lightgray;
-	box-sizing: border-box;
+.search-text {
+  width: 100%;
+  padding: 15px 0 15px 20px;
+  font-size: 15px;
+  border: 0 none;
+  height: 40px;
+  margin-right: 0;
+  color: black;
+  outline: none;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
   transition: all 0.15s;
   border-top-left-radius: 4px;
-	border-bottom-left-radius: 4px;
-	box-shadow: 0 8px 6px -8px black;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 8px 6px -8px black;
 }
 
 .search-text:focus {
-	// background: rgb(36, 42, 155);
-	box-shadow: 0 8px 6px -6px black;	
+  box-shadow: 0 8px 6px -6px black;
 }
 
 .search-button {
-  width: 60px; 
-	border: 0 none;
-	background: #D97900 url(../../assets/images/search.png) center no-repeat;
-	float: left;
-	padding: 0;
-	text-align: center;
-	height: 40px;
-	cursor: pointer;
-	box-shadow: 0 8px 6px -6px black;	
+  width: 60px;
+  border: 0 none;
+  background: #d97900 url(../../assets/images/search.png) center no-repeat;
+  float: left;
+  padding: 0;
+  text-align: center;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 8px 6px -6px black;
   border-top-right-radius: 4px;
-	border-bottom-right-radius: 4px;
-	&:hover{
-		box-shadow: 0 0 9px #2e3060;
-	}
+  border-bottom-right-radius: 4px;
+  &:hover {
+    box-shadow: 0 0 9px #2e3060;
+  }
 }
