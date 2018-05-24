@@ -1,5 +1,15 @@
 .App {
-  text-align: center; }
+  text-align: center;
+  overflow: auto; }
+
+.content {
+  position: absolute;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

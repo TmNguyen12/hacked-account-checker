@@ -4,8 +4,13 @@ $header-color: #25274D;
 header {
   background-color: $header-color; 
   color: white;
-  height: 30px;
+  height: 50px;
   display: flex; 
   justify-content: center;
   align-items: center;  
+  font-size:18px;
+  position: fixed; 
+  width: 100%;
+  z-index: 5; 
 }
+

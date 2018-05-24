@@ -5,7 +5,9 @@
   flex-direction: column;
   margin-top: 30px;
   border-top: 1px solid gray;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px; }
 
 .result-item {
   display: flex;
@@ -16,25 +18,41 @@
   padding-bottom: 15px;
   border-bottom: 1px solid gray;
   width: 100%;
-  max-width: 900px; }
+  max-width: 1000px; }
   .result-item img {
-    width: 75px; }
+    width: 100px; }
+
+@media only screen and (max-width: 660px) {
+  .result-item img {
+    width: 75px; } }
+.result-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  font-size: 18px;
+  margin-left: 15px; }
+
+.breach-date {
+  padding: 10px 0; }
 
 .description {
   padding: 7px 0; }
 
-.result-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  font-size: 18px;
-  margin-left: 15px; }
-  .result-text * {
-    padding: 3px 0; }
-
 .Title {
   font-size: 32px; }
+
+.description {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  letter-spacing: 1.25px;
+  word-spacing: 2px; }
+
+.data-classes-text {
+  display: inline; }
+
+.data-classes-info {
+  display: inline; }
 
 @media only screen and (max-width: 1280px) {
   .result-text {
@@ -43,6 +61,10 @@
   .Title {
     font-size: 28px; } }
 @media only screen and (max-width: 660px) {
+  .data-classes-info {
+    display: block;
+    padding-top: 3px; }
+
   .result-text {
     font-size: 13px; }
 
@@ -60,12 +82,26 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
 
 .search-bar {
-  width: 100%;
+  z-index: 10;
+  box-sizing: border-box;
+  width: 90%;
   display: flex;
-  max-width: 435px; }
+  max-width: 435px;
+  position: absolute;
+  top: 190px;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .search-bar input {
+    transition: width 0.2s;
+    -webkit-appearance: none;
+    /* Autoprefixer doesn't catch this */ }
+  .fix-search .search-bar {
+    position: fixed;
+    top: 25px; }
 
 .search-text {
   width: 100%;

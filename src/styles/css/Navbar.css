@@ -1,9 +1,13 @@
 header {
   background-color: #25274D;
   color: white;
-  height: 30px;
+  height: 50px;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  font-size: 18px;
+  position: fixed;
+  width: 100%;
+  z-index: 5; }
 
 /*# sourceMappingURL=Navbar.css.map */

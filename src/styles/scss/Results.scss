@@ -6,6 +6,8 @@
   margin-top: 30px;
   border-top: 1px solid gray;
   overflow: hidden;
+  width: 100%;
+  max-width: 1000px; 
 }
 
 .result-item {
@@ -17,10 +19,35 @@
   padding-bottom: 15px;
   border-bottom: 1px solid gray;
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   img {
-    width: 75px;
+    width: 100px;
   }
+}
+
+
+@media only screen and (max-width: 660px) {
+  .result-item {
+    img {
+      width: 75px; 
+    }
+  }
+}
+
+.result-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  font-size: 18px;
+  margin-left: 15px;
+  * {
+    // padding: 3px 0;
+  }
+}
+
+.breach-date {
+  padding: 10px 0; 
 }
 
 .description {
@@ -34,20 +61,25 @@
 //   display: none;
 // }
 
-.result-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  font-size: 18px;
-  margin-left: 15px;
-  * {
-    padding: 3px 0;
-  }
-}
+
 
 .Title {
   font-size: 32px;
+}
+
+.description { 
+  padding-top: 10px; 
+  padding-bottom: 20px; 
+  letter-spacing: 1.25px; 
+  word-spacing: 2px;
+}
+
+.data-classes-text {
+  display: inline; 
+}
+
+.data-classes-info {
+  display: inline; 
 }
 
 @media only screen and (max-width: 1280px) {
@@ -59,7 +91,12 @@
   }
 }
 
+
 @media only screen and (max-width: 660px) {
+  .data-classes-info {
+    display: block; 
+    padding-top:3px;
+  }
   .result-text {
     font-size: 13px;
   }

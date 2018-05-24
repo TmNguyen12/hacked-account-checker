@@ -71,7 +71,17 @@ body {
   font-family: scandia-regular; }
 
 .App {
-  text-align: center; }
+  text-align: center;
+  overflow: auto; }
+
+.content {
+  position: absolute;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -97,18 +107,23 @@ body {
 header {
   background-color: #25274D;
   color: white;
-  height: 30px;
+  height: 50px;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  font-size: 18px;
+  position: fixed;
+  width: 100%;
+  z-index: 5; }
 
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 120px;
-  font-size: 28px;
-  margin: 0 20px; }
+  font-size: 32px;
+  margin: 50px 20px;
+  z-index: 10; }
 
 .results-index {
   display: flex;
@@ -117,7 +132,9 @@ header {
   flex-direction: column;
   margin-top: 30px;
   border-top: 1px solid gray;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px; }
 
 .result-item {
   display: flex;
@@ -128,25 +145,41 @@ header {
   padding-bottom: 15px;
   border-bottom: 1px solid gray;
   width: 100%;
-  max-width: 900px; }
+  max-width: 1000px; }
   .result-item img {
-    width: 75px; }
+    width: 100px; }
+
+@media only screen and (max-width: 660px) {
+  .result-item img {
+    width: 75px; } }
+.result-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  font-size: 18px;
+  margin-left: 15px; }
+
+.breach-date {
+  padding: 10px 0; }
 
 .description {
   padding: 7px 0; }
 
-.result-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  font-size: 18px;
-  margin-left: 15px; }
-  .result-text * {
-    padding: 3px 0; }
-
 .Title {
   font-size: 32px; }
+
+.description {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  letter-spacing: 1.25px;
+  word-spacing: 2px; }
+
+.data-classes-text {
+  display: inline; }
+
+.data-classes-info {
+  display: inline; }
 
 @media only screen and (max-width: 1280px) {
   .result-text {
@@ -155,6 +188,10 @@ header {
   .Title {
     font-size: 28px; } }
 @media only screen and (max-width: 660px) {
+  .data-classes-info {
+    display: block;
+    padding-top: 3px; }
+
   .result-text {
     font-size: 13px; }
 
@@ -172,12 +209,26 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
 
 .search-bar {
-  width: 100%;
+  z-index: 10;
+  box-sizing: border-box;
+  width: 90%;
   display: flex;
-  max-width: 435px; }
+  max-width: 435px;
+  position: absolute;
+  top: 190px;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .search-bar input {
+    transition: width 0.2s;
+    -webkit-appearance: none;
+    /* Autoprefixer doesn't catch this */ }
+  .fix-search .search-bar {
+    position: fixed;
+    top: 25px; }
 
 .search-text {
   width: 100%;

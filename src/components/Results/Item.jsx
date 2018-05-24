@@ -10,17 +10,21 @@ class Item extends Component {
   }
 
   toggleDescription(e) {
-    console.log('e', e);
+
     const shownItem = document.getElementsByClassName('show');
-    console.log('shown item', shownItem);
-    
-    if (shownItem.length > 0) {
+    const itemText = document.getElementById(e.target.dataset.internalid);
+    if (shownItem.length > 0 && shownItem[0].id === itemText.id){
       shownItem[0].classList.add('hidden');
       shownItem[0].classList.remove('show');
+    } else {
+      if (shownItem.length > 0) {
+        shownItem[0].classList.add('hidden');
+        shownItem[0].classList.remove('show');
+      }
+    
+      itemText.classList.remove('hidden');
+      itemText.classList.add('show');
     }
-    const itemText = document.getElementById(e.target.dataset.internalid);
-    itemText.classList.remove('hidden');
-    itemText.classList.add('show');
   }
 
   render() {
@@ -51,14 +55,26 @@ class Item extends Component {
           </p>
           <div
             className="description hidden"
+            data-internalid={`${breach.Title}`}
             id={`${breach.Title}`}
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(breach.Description)
             }}
           />
-          <p className="data-classes" data-internalid={`${breach.Title}`}>
-            Compromised Data: <br /> {breach.DataClasses.join(', ')}
-          </p>
+          <div className="data-classes" data-internalid={`${breach.Title}`}>
+            <div
+              className="data-classes-text"
+              data-internalid={`${breach.Title}`}
+            >
+              Compromised Data:{' '}
+            </div>
+            <div
+              className="data-classes-info"
+              data-internalid={`${breach.Title}`}
+            >
+              {breach.DataClasses.join(', ')}
+            </div>
+          </div>
         </div>
       </div>
     );

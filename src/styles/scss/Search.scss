@@ -7,12 +7,30 @@
 	flex-direction:column; 
 	justify-content: center;
 	align-items: center; 
+	width: 100%; 
 }
 
 .search-bar {
-  width: 100%;
+	z-index: 10; 
+	box-sizing: border-box; 
+  width: 90%;
 	display: flex; 
 	max-width: 435px;
+	position: absolute; 
+	top: 190px; 
+	left: 50%; 
+	// right: 20px; 
+	transform: translate(-50%, -50%);
+	input {
+		transition: width 0.2s;
+    -webkit-appearance: none; /* Autoprefixer doesn't catch this */
+	}
+
+.fix-search & {
+	position: fixed; 
+	top: 25px;
+}
+
 }
 
 .search-text{
