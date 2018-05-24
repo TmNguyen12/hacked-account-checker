@@ -1,17 +1,17 @@
 .App {
   text-align: center;
-  overflow: auto; 
+  overflow: auto;
 }
 
 .content {
   position: absolute;
-  overflow-y: scroll; 
-  display: flex; 
-  flex-direction: column; 
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   width: 100%;
-} 
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -42,15 +42,9 @@
   }
 }
 
-// .App {
-//   animation: pulse 5s infinite;
-// }
-
-// @keyframes pulse {
-//   0% {
-//     background-color: #001F3F;
-//   }
-//   100% {
-//     background-color: #FF4136;
-//   }
-// }
+.animated {
+  -webkit-animation-duration: 0.35s;
+  animation-duration: 0.35s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}

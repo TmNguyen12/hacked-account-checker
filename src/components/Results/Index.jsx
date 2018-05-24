@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Item from './Item';
 
-const Index = ({breaches}) => {
-
+const Index = ({ breaches }) => {
   if (breaches[0] === 'none') return null;
   return (
     <div className="results-index">

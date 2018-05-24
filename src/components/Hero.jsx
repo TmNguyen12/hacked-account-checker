@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Hero = () => (
-    <div className="hero">Check if your accounts are safe.</div>
+    <div className="hero">Check If Your Accounts Are Safe</div>
   );
 
 export default Hero;

@@ -1,5 +1,5 @@
 header {
-  background-color: #25274D;
+  background-color: #060B73;
   color: white;
   height: 50px;
   display: flex;
@@ -8,6 +8,6 @@ header {
   font-size: 18px;
   position: fixed;
   width: 100%;
-  z-index: 5; }
+  z-index: 12; }
 
 /*# sourceMappingURL=Navbar.css.map */

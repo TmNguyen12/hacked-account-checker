@@ -3,33 +3,50 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 30px;
-  border-top: 1px solid gray;
   overflow: hidden;
   width: 100%;
-  max-width: 1000px; 
+  max-width: 1000px;
+  margin: 30px 20px 0 20px;
+  box-sizing:border-box; 
+  padding-left: 20px;
+  padding-right: 20px; 
 }
+
 
 .result-item {
   display: flex;
   justify-content: left;
   align-items: left;
-  margin-top: 15px;
+  padding-top: 15px;
   width: 100%;
   padding-bottom: 15px;
   border-bottom: 1px solid gray;
   width: 100%;
   max-width: 1000px;
+  box-sizing:border-box; 
+  padding-left: 20px;
   img {
     width: 100px;
+    min-width: 100px;
   }
 }
+.result-item:first-child {
+  border-top: 1px solid gray; 
+}
 
+.result-item:hover {
+  // background-color: #2e3060; 
+  // color: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #2e3060;
+  cursor: pointer; 
+  transform: scale(1.05);
+}
 
 @media only screen and (max-width: 660px) {
   .result-item {
     img {
-      width: 75px; 
+      width: 75px;
     }
   }
 }
@@ -47,39 +64,34 @@
 }
 
 .breach-date {
-  padding: 10px 0; 
+  padding: 10px 0;
 }
 
 .description {
   padding: 7px 0;
 }
 
-// .result-text:hover .description {
-//   display: block;
-// }
-// .description {
-//   display: none;
-// }
-
-
-
 .Title {
   font-size: 32px;
 }
 
-.description { 
-  padding-top: 10px; 
-  padding-bottom: 20px; 
-  letter-spacing: 1.25px; 
+.description {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  letter-spacing: 1.25px;
   word-spacing: 2px;
+  overflow:hidden;
+  transition:height 0.3s ease-out;
+  transition:padding 0.5s ease-out;
+  height:auto; 
 }
 
 .data-classes-text {
-  display: inline; 
+  display: inline;
 }
 
 .data-classes-info {
-  display: inline; 
+  display: inline;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -91,11 +103,10 @@
   }
 }
 
-
 @media only screen and (max-width: 660px) {
   .data-classes-info {
-    display: block; 
-    padding-top:3px;
+    display: block;
+    padding-top: 3px;
   }
   .result-text {
     font-size: 13px;
@@ -106,10 +117,32 @@
   }
 }
 
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@keyframes (fadeInDown) {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
 .hidden {
-  display: none;
+  // display: none; 
+  height: 0px; 
+  padding: 0; 
 }
 
 .show {
-  display: block;
+  // display: block;
+  // top: 100%; 
 }

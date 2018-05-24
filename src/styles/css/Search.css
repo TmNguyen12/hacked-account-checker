@@ -3,24 +3,38 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 30px;
-  border-top: 1px solid gray;
   overflow: hidden;
   width: 100%;
-  max-width: 1000px; }
+  max-width: 1000px;
+  margin: 30px 20px 0 20px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px; }
 
 .result-item {
   display: flex;
   justify-content: left;
   align-items: left;
-  margin-top: 15px;
+  padding-top: 15px;
   width: 100%;
   padding-bottom: 15px;
   border-bottom: 1px solid gray;
   width: 100%;
-  max-width: 1000px; }
+  max-width: 1000px;
+  box-sizing: border-box;
+  padding-left: 20px; }
   .result-item img {
-    width: 100px; }
+    width: 100px;
+    min-width: 100px; }
+
+.result-item:first-child {
+  border-top: 1px solid gray; }
+
+.result-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #2e3060;
+  cursor: pointer;
+  transform: scale(1.05); }
 
 @media only screen and (max-width: 660px) {
   .result-item img {
@@ -46,7 +60,11 @@
   padding-top: 10px;
   padding-bottom: 20px;
   letter-spacing: 1.25px;
-  word-spacing: 2px; }
+  word-spacing: 2px;
+  overflow: hidden;
+  transition: height 0.3s ease-out;
+  transition: padding 0.5s ease-out;
+  height: auto; }
 
 .data-classes-text {
   display: inline; }
@@ -70,11 +88,22 @@
 
   .Title {
     font-size: 20px; } }
-.hidden {
-  display: none; }
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown; }
 
-.show {
-  display: block; }
+@keyframes (fadeInDown) {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+.hidden {
+  height: 0px;
+  padding: 0; }
 
 .search-container {
   margin: 0 20px;
@@ -86,7 +115,7 @@
   width: 100%; }
 
 .search-bar {
-  z-index: 10;
+  z-index: 20;
   box-sizing: border-box;
   width: 90%;
   display: flex;
@@ -97,40 +126,43 @@
   transform: translate(-50%, -50%); }
   .search-bar input {
     transition: width 0.2s;
-    -webkit-appearance: none;
-    /* Autoprefixer doesn't catch this */ }
+    -webkit-appearance: none; }
   .fix-search .search-bar {
     position: fixed;
-    top: 25px; }
+    top: 24px; }
 
 .search-text {
   width: 100%;
   padding: 15px 0 15px 20px;
   font-size: 15px;
   border: 0 none;
-  height: 50px;
+  height: 40px;
   margin-right: 0;
-  color: white;
+  color: black;
   outline: none;
-  background: lightgray;
+  border: 1px solid lightgray;
   box-sizing: border-box;
   transition: all 0.15s;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px; }
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 8px 6px -8px black; }
 
 .search-text:focus {
-  background: #409777; }
+  box-shadow: 0 8px 6px -6px black; }
 
 .search-button {
   width: 60px;
   border: 0 none;
-  background: lightgray url(../../assets/images/search.png) center no-repeat;
+  background: #D97900 url(../../assets/images/search.png) center no-repeat;
   float: left;
   padding: 0;
   text-align: center;
-  height: 50px;
+  height: 40px;
   cursor: pointer;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px; }
+  box-shadow: 0 8px 6px -6px black;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px; }
+  .search-button:hover {
+    box-shadow: 0 0 9px #2e3060; }
 
 /*# sourceMappingURL=Search.css.map */

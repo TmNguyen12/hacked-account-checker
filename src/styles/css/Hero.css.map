@@ -1,7 +1,9 @@
 {
-"version": 3,
-"mappings": "AAAA,KAAM;EACJ,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,MAAM,EAAE,KAAK;EACb,SAAS,EAAE,IAAI;EACf,MAAM,EAAE,SAAS;EACjB,OAAO,EAAC,EAAE",
-"sources": ["../scss/Hero.scss"],
-"names": [],
-"file": "Hero.css"
+	"version": 3,
+	"file": "Hero.css",
+	"sources": [
+		"../scss/Hero.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,KAAK,CAAC;EACJ,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,MAAM,EAAE,KAAK;EACb,SAAS,EAAE,IAAI;EACf,MAAM,EAAE,SAAS;EACjB,OAAO,EAAC,EAAE,GACX"
 }

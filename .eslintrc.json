@@ -8,6 +8,8 @@
   ],
   "plugins": ["react", "jsx-a11y", "import"],
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "class-methods-use-this": [<enabled>, { "exceptMethods": [collapseSection, expandSection] }]
+
   }
 }
