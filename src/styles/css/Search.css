@@ -6,10 +6,17 @@
   overflow: hidden;
   width: 100%;
   max-width: 1000px;
-  margin: 30px 20px 0 20px;
+  margin: 30px 50px 28px 50px;
   box-sizing: border-box;
   padding-left: 20px;
   padding-right: 20px; }
+
+@media only screen and (max-width: 660px) {
+  .results-index {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px; } }
 
 .result-item {
   display: flex;
@@ -38,6 +45,7 @@
   .result-item img {
     width: 75px;
     min-width: 75px; } }
+
 .result-text {
   display: flex;
   flex-direction: column;
@@ -49,22 +57,23 @@
 .breach-date {
   padding: 10px 0; }
 
-.description {
-  padding: 7px 0; }
-
 .Title {
   font-size: 32px; }
 
 .description {
-  padding-top: 10px;
-  padding-bottom: 20px;
   letter-spacing: 1.25px;
   margin-right: 20px;
+  margin-bottom: 10px;
+  font-style: italic;
   word-spacing: 2px;
   overflow: hidden;
-  transition: height 0.3s ease-out;
-  transition: padding 0.5s ease-out;
+  transition: height 0.4s ease-in;
+  font-style: italic;
   height: auto; }
+
+.hidden {
+  height: 0px !important;
+  transition: height 0.4s ease-in; }
 
 .data-classes-text {
   display: inline; }
@@ -75,22 +84,17 @@
 @media only screen and (max-width: 1280px) {
   .result-text {
     font-size: 18px; }
-
   .Title {
     font-size: 28px; } }
+
 @media only screen and (max-width: 660px) {
   .data-classes-info {
     display: block;
     padding-top: 3px; }
-
   .result-text {
     font-size: 13px; }
-
   .Title {
     font-size: 20px; } }
-.hidden {
-  height: 0px;
-  padding: 0; }
 
 .search-container {
   margin: 0 20px;
@@ -151,5 +155,3 @@
   border-bottom-right-radius: 4px; }
   .search-button:hover {
     box-shadow: 0 0 9px #2e3060; }
-
-/*# sourceMappingURL=Search.css.map */

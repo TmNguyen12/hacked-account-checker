@@ -12,28 +12,15 @@ class Item extends Component {
   }
 
   collapseSection(element) {
-    let descriptionHeight = element.scrollHeight;
-    let elementTransition = element.style.transition;
-    element.style.transition = '';
-
-    requestAnimationFrame(() => {
-      element.style.height = descriptionHeight + 'px';
-      element.style.transition = elementTransition;
-
-      requestAnimationFrame(() => {
-        element.style.height = 0 + 'px';
-      });
-    });
-
     element.classList.add('hidden');
     element.classList.remove('show');
   }
 
   expandSection(element) {
+    // we need this because height is set to auto in css.
     let descriptionHeight = element.scrollHeight;
     element.style.height = descriptionHeight + 'px';
 
-    window.setTimeout(() => (element.style.height = null), 400);
     element.classList.remove('hidden');
     element.classList.add('show');
   }
@@ -41,12 +28,12 @@ class Item extends Component {
   toggleDescription(e) {
     const shownItem = document.getElementsByClassName('show');
     const itemText = document.getElementById(e.target.dataset.internalid);
-    
-    // Cases where you click on the same index item to open and then close 
+
+    // Cases where you click on the same index item to open and then close
     if (shownItem.length > 0 && shownItem[0].id === itemText.id) {
       this.collapseSection(shownItem[0]);
     } else {
-      // closes any currently expanded description sections 
+      // closes any currently expanded description sections
       if (shownItem.length > 0) {
         this.collapseSection(shownItem[0]);
       }
