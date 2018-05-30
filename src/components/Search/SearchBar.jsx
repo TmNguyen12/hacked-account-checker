@@ -30,9 +30,13 @@ export class SearchBar extends Component {
   }
 
   bubbleUpResults() {
-    fetchBreachedAccounts(this.state.text).then(results =>
-      this.props.sendBreaches(results.data)
-    );
+    fetchBreachedAccounts(this.state.text).then(results => {
+      if (results){
+        this.props.sendBreaches(results.data)
+      } else {
+        this.props.sendBreaches(''); 
+      }
+    });
   }
 
   handleSubmit(event) {

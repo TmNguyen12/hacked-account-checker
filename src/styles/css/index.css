@@ -210,6 +210,11 @@ header {
   .Title {
     font-size: 20px; } }
 
+.no-breach-result {
+  padding-top: 40px;
+  font-size: 36px;
+  color: #060B73; }
+
 .search-container {
   margin: 0 20px;
   box-sizing: border-box;
@@ -282,5 +287,3 @@ header {
   display: flex;
   justify-content: center;
   align-items: center; }
-
-/*# sourceMappingURL=index.css.map */

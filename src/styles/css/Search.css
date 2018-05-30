@@ -96,6 +96,11 @@
   .Title {
     font-size: 20px; } }
 
+.no-breach-result {
+  padding-top: 40px;
+  font-size: 36px;
+  color: #060B73; }
+
 .search-container {
   margin: 0 20px;
   box-sizing: border-box;
@@ -155,5 +160,3 @@
   border-bottom-right-radius: 4px; }
   .search-button:hover {
     box-shadow: 0 0 9px #2e3060; }
-
-/*# sourceMappingURL=Search.css.map */

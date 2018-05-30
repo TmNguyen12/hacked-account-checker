@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from './SearchBar';
-import Index from '../Results/Index';
+import Display from '../Results/Display'; 
 
 class SearchContainer extends Component {
   constructor(props) {
@@ -10,10 +10,14 @@ class SearchContainer extends Component {
     };
     this.getBreaches = this.getBreaches.bind(this);
   }
-
+  
+  
   getBreaches(breachArray) {
+    const noBreach = [{Title: 'No Breaches Found!'}]; 
     if (breachArray) {
       this.setState({ breaches: breachArray });
+    } else {
+      this.setState({breaches: noBreach})
     }
   }
 
@@ -21,10 +25,11 @@ class SearchContainer extends Component {
     return (
       <div className="search-container">
         <SearchBar sendBreaches={this.getBreaches} />
-        <Index breaches={this.state.breaches} />
+        <Display breaches={this.state.breaches}/>
       </div>
     );
   }
 }
 
 export default SearchContainer;
+

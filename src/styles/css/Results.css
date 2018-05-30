@@ -96,4 +96,7 @@
   .Title {
     font-size: 20px; } }
 
-/*# sourceMappingURL=Results.css.map */
+.no-breach-result {
+  padding-top: 40px;
+  font-size: 36px;
+  color: #060B73; }
